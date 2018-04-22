@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.jecihjoy.pharmacyasistant.AddContradictionsActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Enter Contradicting meds, their effects and alternatives" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/edit_name1"
+        android:hint="Enter Medicine"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/edt_medicategory"
+            android:layout_width="200dp"
+            android:text="Category"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="fill_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/edit_name2"
+        android:hint="Medicine 2"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/edt_medicategory2"
+            android:layout_width="200dp"
+            android:text="Category"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinner_category2"
+            android:layout_width="fill_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/edit_effects"
+        android:hint="Effects"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/edit_others"
+        android:hint="alternatives"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/btn_save"
+            android:text="SAVE"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/btn_cancel"
+            android:text="CANCEL"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

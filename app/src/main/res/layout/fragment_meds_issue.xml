@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jecihjoy.pharmacyasistant.MedsIssueFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/edit_medname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="MEDICIINE" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/edt_medication_frequency"
+                android:layout_width="200dp"
+                android:text="Frequency"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_frequency"
+                android:layout_width="fill_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/edit_days"
+            android:hint="enter number of days"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/btn_issue"
+                android:text="ISSUE"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/btn_cancel"
+                android:text="CANCEL"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/edit_remaining"
+            android:text=""/>
+
+    </LinearLayout>
+</ScrollView>
