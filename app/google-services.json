@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "330699893013",
+    "firebase_url": "https://pharmacy-assistant.firebaseio.com",
+    "project_id": "pharmacy-assistant",
+    "storage_bucket": "pharmacy-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330699893013:android:16b2f1662ebccc4b",
+        "android_client_info": {
+          "package_name": "com.example.jecihjoy.pharmacyasistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330699893013-jsf7ennqtspdeicddbf45odvg4h1336a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jecihjoy.pharmacyasistant",
+            "certificate_hash": "9ade74dfef05d84b1bcfc36e5b9779682b436022"
+          }
+        },
+        {
+          "client_id": "330699893013-jv95flfhegmksn7hi02od973446q7anv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD535BTA2HVcLuR-7jhuCBM5yWmzwZe_XI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330699893013-jv95flfhegmksn7hi02od973446q7anv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -83,22 +83,16 @@ public class NewMapActivity extends FragmentActivity implements OnMapReadyCallba
         return true;
     }
 
-    public void nearPharmacies(){
-        String School = "school";
-        Log.d("onClick", "Button is Clicked");
-        mMap.clear();
-        if (mCurrLocationMarker != null) {
-            mCurrLocationMarker.remove();
-        }
-        String url = getUrl(latitude, longitude, School);
-        Object[] DataTransfer = new Object[2];
-        DataTransfer[0] = mMap;
-        DataTransfer[1] = url;
-        Log.d("onClick", url);
-        GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-        getNearbyPlacesData.execute(DataTransfer);
-        Toast.makeText(NewMapActivity.this,"Nearby Schools", Toast.LENGTH_LONG).show();
-    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -118,7 +112,62 @@ public class NewMapActivity extends FragmentActivity implements OnMapReadyCallba
             mMap.setMyLocationEnabled(true);
         }
 
-        nearPharmacies();
+        Button btnRestaurant = (Button) findViewById(R.id.btnRestaurant);
+        btnRestaurant.setOnClickListener(new View.OnClickListener() {
+            String Restaurant = "pharmacy";
+            @Override
+            public void onClick(View v) {
+                Log.d("onClick", "Button is Clicked");
+                mMap.clear();
+                String url = getUrl(latitude, longitude, Restaurant);
+                Object[] DataTransfer = new Object[2];
+                DataTransfer[0] = mMap;
+                DataTransfer[1] = url;
+                Log.d("onClick", url);
+                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData.execute(DataTransfer);
+                Toast.makeText(NewMapActivity.this,"Nearby Pharmacy", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button btnHospital = (Button) findViewById(R.id.btnHospital);
+        btnHospital.setOnClickListener(new View.OnClickListener() {
+            String Hospital = "hospital";
+            @Override
+            public void onClick(View v) {
+                Log.d("onClick", "Button is Clicked");
+                mMap.clear();
+                String url = getUrl(latitude, longitude, Hospital);
+                Object[] DataTransfer = new Object[2];
+                DataTransfer[0] = mMap;
+                DataTransfer[1] = url;
+                Log.d("onClick", url);
+                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+                getNearbyPlacesData.execute(DataTransfer);
+                Toast.makeText(NewMapActivity.this,"Nearby Hospitals", Toast.LENGTH_LONG).show();
+            }
+        });
+
+//        Button btnSchool = (Button) findViewById(R.id.btnSchool);
+//        btnSchool.setOnClickListener(new View.OnClickListener() {
+//            String School = "school";
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("onClick", "Button is Clicked");
+//                mMap.clear();
+//                if (mCurrLocationMarker != null) {
+//                    mCurrLocationMarker.remove();
+//                }
+//                String url = getUrl(latitude, longitude, School);
+//                Object[] DataTransfer = new Object[2];
+//                DataTransfer[0] = mMap;
+//                DataTransfer[1] = url;
+//                Log.d("onClick", url);
+//                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+//                getNearbyPlacesData.execute(DataTransfer);
+//                Toast.makeText(NewMapActivity.this,"Nearby Schools", Toast.LENGTH_LONG).show();
+//            }
+//        });
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -181,7 +230,7 @@ public class NewMapActivity extends FragmentActivity implements OnMapReadyCallba
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
         Toast.makeText(NewMapActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));

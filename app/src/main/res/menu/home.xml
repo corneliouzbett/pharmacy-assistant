@@ -29,5 +29,6 @@
         android:id="@+id/action_notification"
         android:title="notify"
         android:icon="@drawable/ic_notifications_none_black_24dp"
+        app:actionLayout="@layout/custom_item_layout"
         app:showAsAction="always"/>
 </menu>
